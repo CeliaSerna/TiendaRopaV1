@@ -81,8 +81,19 @@ public int getIdProductoTem() {
 	return idProductoTem;
 }
 
-	
-	
+public void restarStock(int cantidad) {
+	this.stockPro -= cantidad;
+}
+public void aumentarStock(int cantidad) {
+	this.stockPro += cantidad;
+}
+
+@Override
+public String toString() {
+	return "Producto [nombre=" + nombre + ", precio=" + precio + ", imagenURL=" + imagenURL + ", descripcionC="
+			+ descripcionC + ", stockPro=" + stockPro + ", descripcionL=" + descripcionL + ", idProductoTem="
+			+ idProductoTem + "]";
+}
 	
 	
 }
