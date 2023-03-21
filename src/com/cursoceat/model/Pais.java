@@ -2,15 +2,15 @@ package com.cursoceat.model;
 
 public enum Pais {
 
-	ES(1.21), FR(1.20), PT(1.23);
+	ES(21), FR(20), PT(23);
 
-double porcentaje;
+int porcentaje;
 
-private Pais(double porcentaje) {
+private Pais(int porcentaje) {
 	this.porcentaje = porcentaje;
 }
 
-public Double getPorcentaje() {
+public int getPorcentaje() {
 	return porcentaje;
 }
 

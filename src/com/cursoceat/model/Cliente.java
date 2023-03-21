@@ -85,11 +85,19 @@ public void setPaisCliente(Pais paisCliente) {
 	this.paisCliente = paisCliente;
 }
 
+
+public int getIdTemp() {
+	return idTemp;
+}
+
+public void setIdTemp(int idTemp) {
+	this.idTemp = idTemp;
+}
+
 @Override
 public String toString() {
 	return "Cliente [nombre=" + nombre + ", apellidos=" + apellidos + ", direccion=" + direccion + ", localidad="
-			+ localidad + ", telefono=" + telefono + ", dni=" + dni + ", paisCliente=" + paisCliente + ", idTemp="
-			+ idTemp + "]";
+			+ localidad + ", telefono=" + telefono + ", dni=" + dni + ", paisCliente=" + paisCliente +", idCliente="+ idCliente +"]";
 }
 	
 	
