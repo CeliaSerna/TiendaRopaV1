@@ -63,11 +63,15 @@ public void setIdProducto(int idProducto) {
 
 
 
-
-public void setPrecioProducto(double precioProducto) {
-	this.precioProducto = precioProducto;
+//this es para el atributo, sin this es una variable,esta variable se puede llamar de cualquier manera
+public void setPrecioProducto(double precioProductoX) {
+	if (this.cantidadProducto >=5) {
+		this.precioProducto = precioProductoX*0.98;		
+				}else {
+		
+	this.precioProducto = precioProductoX;
 }
-
+}
 
 
 
@@ -156,8 +160,8 @@ public void setTotalPedidoSinIva(double precio, int cantidadProducto) {
 public String toString() {
 	return "Pedido [idLocal=" + idLocal + ", fechaHoraPedido=" + fechaHoraPedido + ", idCliente=" + idCliente
 			+ ", ivaPaisCliente=" + ivaPaisCliente + ", idProducto=" + idProducto + ", cantidadProducto="
-			+ cantidadProducto + ", precioProducto=" + precioProducto + ", totalPedido=" + totalPedido
-			+ ", totalPedidoSinIva=" + totalSinIva + "]";
+			+ cantidadProducto + ", precioProducto=" + precioProducto + "E, totalPedido=" + totalPedido
+			+ "E, totalPedidoSinIva=" + totalSinIva + "E]";
 }
 
 

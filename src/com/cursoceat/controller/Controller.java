@@ -12,7 +12,7 @@ public class Controller {
 		// TODO Auto-generated method stub
 
 Producto miProducto	= new Producto("Camiseta roja", 15.5, "c:\\imagenes\\img1.jpg", 
-		"Camiseta de algodon", 10, "100% algodon, lavar a maquina 30ÂºC");
+		"Camiseta de algodón", 10, "100% algodón, lavar a máquina 30ºC");
 
 ArrayList<Producto> p1= new ArrayList<Producto>();
 p1.add(miProducto);
@@ -21,7 +21,7 @@ System.out.println(p1.toString());
 miProducto.aumentarStock(5);	
 System.out.println(p1.toString());
 
-Cliente miCliente1 = new Cliente("MarÃ­a", "PÃ©rez", "Calle Oriente,59", "Tomelloso",  "666555444", "70707070e",Pais.ES);
+Cliente miCliente1 = new Cliente("María", "Pérez", "Calle Oriente,59", "Tomelloso",  "666555444", "70707070e",Pais.ES);
 System.out.println(miCliente1.toString());
 	
 
@@ -31,7 +31,6 @@ Pedido miPedido1 = new Pedido();
 	
 miPedido1.setIdCliente(miCliente1.getIdTemp());
 miPedido1.setIvaPaisCliente(miCliente1.getPaisCliente().getPorcentaje());
-
 	
 miPedido1.setIdProducto(miProducto.getIdProductoTem());
 
@@ -43,6 +42,21 @@ miPedido1.setTotalPedidoSinIva(miPedido1.getPrecioProducto(), miPedido1.getCanti
 miPedido1.setTotalPedido(miPedido1.gettotalSinIva(), miPedido1.getIvaPaisCliente());
 System.out.println(miPedido1.toString());	
 	
+Cliente miCliente2 = new Cliente("Jose", "Lopez", "Calle La habana","Lisboa", "777744111", "88888888c", Pais.PT);
+Cliente miCliente3 = new Cliente("Joan", "Pierre", "Calle Paris", "Lyon", "766444213", "695874478c", Pais.FR);	
+
+Pedido miPedido2 = new Pedido();
+miPedido2.setIdProducto(miProducto.getIdProductoTem());
+miPedido2.setIdCliente(miCliente2.getIdTemp());
+miPedido2.setIvaPaisCliente(miCliente2.getPaisCliente().getPorcentaje());
+
+miPedido2.setCantidadProducto(6);
+miPedido2.setPrecioProducto(miProducto.getPrecio());
+miPedido2.setTotalPedidoSinIva(miPedido2.getPrecioProducto(), miPedido2.getCantidadProducto());
+
+miPedido2.setTotalPedido(miPedido2.gettotalSinIva(), miPedido2.getIvaPaisCliente());
+
+System.out.println( miPedido2.toString());
 	}
 
 }
